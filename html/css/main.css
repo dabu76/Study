@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box5;
+}
+body {
+  margin: 0;
+}
 .profile {
   width: 100px;
   border-radius: 100px;
@@ -59,4 +65,72 @@
   height: 100px;
   background-color: grey;
   /* clear: both; */
+}
+.main-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 1200px;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: top;
+  padding: 1px;
+  /*バックグラウンドが サイズが小さくて半福される時がると
+  それで半福できないようにすることができる
+  background-repeat: no-repeat; */
+}
+.main-title {
+  margin-top: 100px;
+  color: orange;
+  font-size: 40px;
+}
+.main-content {
+  color: #bfa2db;
+  font-size: 20px;
+  font-weight: 700;
+}
+.main-nav {
+  text-decoration: none;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-button {
+  font-size: 20px;
+  color: white;
+  width: 90%;
+  height: 45px;
+  border: none;
+  background-color: skyblue;
+
+  /*父母属性を基準にすることは
+  position: absolute;
+  父母基準にして真ん中に位置するのは 
+  left: 0;
+  right: 0;
+  margin: auto;
+  widthは何pxでも良い
+  width: 100px; */
+}
+.bottom-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -100px;
+  height: 240px;
+  width: 80%;
+  max-width: 600px;
+}
+.bottom-content {
+  text-align: center;
 }
