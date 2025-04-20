@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.top th,
+.top td {
+  border-bottom: 1px solid black;
+}
+.second th,
+.second td {
+  border-bottom: 1px solid black;
+}
+
+table {
+  width: 600px;
+  background: white;
+  border-radius: 20px;
+}
+th {
+  height: 50px;
+  margin: 0px 20px;
+  text-align: left;
+  color: skyblue;
+}
+.image {
+  vertical-align: middle;
+  text-align: center;
+  margin: 5px auto;
+  width: 100px;
+  height: 60px;
+}
+
+.image-th {
+  text-align: center;
+}
+
+.price {
+  text-align: right;
+  color: skyblue;
+}
+.count {
+  text-align: right;
+  color: skyblue;
+}
+table {
+  border-collapse: collapse;
+}
+.total {
+  text-align: right;
+  color: blue;
+}
+.total-price {
+  text-align: right;
+  font-size: 25px;
+  color: blue;
+}
+.sub-content {
+  color: skyblue;
+  font-size: 14px;
+}
+.content {
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: skyblue;
+}
+.top th {
+  height: 10px;
+}
+.space-width {
+  height: 55px;
+}
+.inner {
+  width: 600px; /* table과 같은 너비 */
+}
+
+.title {
+  text-align: left;
+}
+
+h1 {
+  margin: 0;
+}
+.button {
+  display: flex;
+  justify-content: space-between; /* 좌우 끝 정렬 */
+  align-items: center;
+  margin-top: 10px;
+}
+.button a {
+  font-size: 10px;
+}
+.button button {
+  border: none;
+  height: 30px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.button button:hover {
+  background-color: orange;
+}
+.button button:focus {
+  background-color: grey;
+}
+.button button:active {
+  background-color: chocolate;
+  padding: 2px;
+}
+/* .input-test:focus {
+  border: 2px solid red;
+} */
+.custom-link {
+  text-decoration: none;
+}
+.custom-link:link {
+  color: violet;
+}
+.custom-link:visited {
+  color: black;
+}

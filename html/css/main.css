@@ -4,6 +4,15 @@
 body {
   margin: 0;
 }
+.f-small {
+  font-size: 12px;
+}
+.f-mid {
+  font-size: 16px;
+}
+.f-lg {
+  font-size: 20px;
+}
 .profile {
   width: 100px;
   border-radius: 100px;
@@ -133,4 +142,24 @@ body {
 }
 .bottom-content {
   text-align: center;
+}
+.text-input {
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+input[type="text"] {
+  padding: 30px;
+}
+.main-btn {
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+}
+.bg-red {
+  background: red;
+}
+.bg-blue {
+  background: blue;
 }
