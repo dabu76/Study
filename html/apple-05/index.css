@@ -1,8 +1,19 @@
+@font-face {
+  font-family: "綺麗なフォント";
+  src: url(../font/NanumSquareAcB.ttf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
 }
-
+/* もしフォントの画質が悪い時は 
+角度を非常に細かく回すと良くなる*/
+* {
+  transform: rotate(0.03deg);
+}
+body {
+  font-family: "綺麗なフォント", "gulim", "dotum", "arial";
+}
 .top th,
 .top td {
   border-bottom: 1px solid black;

@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.table {
+  display: flex;
+  flex-wrap: wrap;
+}
+h4,
+p {
+  margin: 10px;
+}
+p {
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .table > div {
+    flex: 0 0 50%;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .table {
+    display: flex;
+    flex-direction: column;
+  }
+}

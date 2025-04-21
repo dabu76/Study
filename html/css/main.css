@@ -163,3 +163,50 @@ input[type="text"] {
 .bg-blue {
   background: blue;
 }
+.flex-container {
+  display: flex;
+}
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  margin: 5px;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: tomato;
+  height: 80px;
+  color: white;
+}
+.nav-package {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700px;
+}
+.nav-services {
+  margin: 0 10px;
+}
+
+.nav-title {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .main-title {
+    font-size: 30px;
+  }
+  .nav-package {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 20px;
+  }
+}
