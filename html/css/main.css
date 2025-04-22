@@ -172,6 +172,7 @@ input[type="text"] {
   background-color: grey;
   margin: 5px;
 }
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -197,16 +198,95 @@ input[type="text"] {
   display: flex;
   align-items: center;
 }
+.container-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.table-product {
+  display: flex;
+}
+h4,
+p {
+  margin: 10px;
+}
+p {
+  text-align: center;
+}
+.product-nav {
+  text-align: center;
+}
+.product-nav i {
+  box-sizing: border-box;
+  background-color: burlywood;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  padding-top: 25px;
+  color: white;
+  margin-top: 40px;
+}
+.shop-bg {
+  background-color: #eee;
+  padding: 20px;
+}
+.shop-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.shop-item {
+  width: 33%;
+  padding: 10px;
+}
+.shop-item img {
+  width: 100%;
+  display: block;
+}
+.overlay-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.overlay-wrap:hover .overlay-black {
+  margin-top: 50%;
+  opacity: 1;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 1s;
+}
+.overlay-black {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 100%;
+  transition: all 1s;
+}
+.overlay:hover {
+  opacity: 1;
+  height: 50%;
+}
 @media screen and (max-width: 1200px) {
-  .main-title {
-    font-size: 30px;
+  .table-product > div {
+    width: 100%;
   }
-  .nav-package {
-    font-size: 12px;
+  p {
+    text-align: left;
   }
 }
-@media screen and (max-width: 768px) {
-  .main-title {
-    font-size: 20px;
+
+@media screen and (max-width: 576px) {
+  .table-product {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

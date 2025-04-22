@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.table {
+.table-product {
   display: flex;
   flex-wrap: wrap;
 }
@@ -21,7 +21,7 @@ p {
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
-  .table > div {
+  .table-product > div {
     flex: 0 0 50%;
   }
   p {
@@ -30,7 +30,7 @@ p {
 }
 
 @media screen and (max-width: 576px) {
-  .table {
+  .table-product {
     display: flex;
     flex-direction: column;
   }
