@@ -95,11 +95,13 @@ body {
   color: orange;
   font-size: 40px;
 }
+
 .main-content {
   color: #bfa2db;
   font-size: 20px;
   font-weight: 700;
 }
+
 .main-nav {
   text-decoration: none;
 }
