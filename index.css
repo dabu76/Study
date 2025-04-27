@@ -1,0 +1,44 @@
+@media screen and (min-width: 772px) {
+  .card1 {
+    width: 1200px;
+    height: 300px;
+  }
+  .inner-card {
+    width: 100%;
+  }
+  .card-table {
+    padding-left: 30px;
+    border-left: 1px solid #ccc;
+  }
+  .card2 {
+    width: 100%;
+  }
+  .work-card {
+    margin-right: 10px;
+    height: 400px;
+    padding: 20px;
+  }
+  .card-body {
+    height: 400px;
+  }
+  .about-card {
+    margin-right: 10px;
+    height: 500px;
+  }
+  .link-card {
+    height: 300px;
+  }
+  .friend-card {
+    height: 300px;
+  }
+  .border2 {
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
+  }
+  .font-small {
+    font-size: 12px;
+  }
+  .font-medium {
+    font-size: 13px;
+  }
+}
