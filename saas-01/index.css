@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.btn-blue, .btn-red, .btn-green {
+  padding: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.div-color, .div-blue, .div-red, .div-green {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.div-green {
+  background: green;
+}
+
+.div-red {
+  background: red;
+}
+
+.div-blue {
+  background: blue;
+}
+
+.btn-green {
+  color: green;
+}
+
+.btn-red {
+  color: red;
+}
+
+.btn-blue {
+  color: blue;
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  color: brown;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 10px;
+  letter-spacing: -1px;
+}
+
+.box {
+  width: 100%;
+  background-color: #2a4cb2;
+  font-size: 14px;
+}
+
+.background {
+  background-color: #2a4cb2;
+  color: #eeeeee;
+  font-size: 18px;
+}
+
+.main-bg h4 {
+  font-size: 16px;
+}
+.main-bg button {
+  color: red;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,75 @@
+@use "reset";
+
+%btn {
+  padding: 100px;
+  height: 100px;
+  padding: 20px;
+}
+.div-color {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+.div-green {
+  @extend .div-color;
+  background: green;
+}
+.div-red {
+  @extend .div-color;
+  background: red;
+}
+.div-blue {
+  @extend .div-color;
+  background: blue;
+}
+.btn-green {
+  @extend %btn;
+  color: green;
+}
+.btn-red {
+  @extend %btn;
+  color: red;
+}
+.btn-blue {
+  @extend %btn;
+  color: blue;
+}
+
+@mixin 作名($size) {
+  font-size: $size;
+  letter-spacing: -1px;
+}
+
+h2 {
+  @include 作名(30px);
+  color: reset.$main-color;
+}
+
+h3 {
+  @include 作名(20px);
+}
+h4 {
+  @include 作名(10px);
+}
+$main-color: #2a4cb2;
+$sub-color: #eeeeee;
+$common-size: 16px;
+.box {
+  width: 100%;
+  background-color: $main-color;
+  font-size: ($common-size - 2px);
+}
+.background {
+  background-color: $main-color;
+  color: $sub-color;
+  font-size: ($common-size + 2px);
+}
+
+.main-bg {
+  h4 {
+    font-size: 16px;
+  }
+  button {
+    color: red;
+  }
+}

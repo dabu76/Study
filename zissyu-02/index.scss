@@ -1,0 +1,71 @@
+@use "_reset";
+%alert {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-bottom: 20px;
+  p:first-child {
+    font-weight: 700;
+    padding-right: 10px;
+  }
+}
+
+@mixin p-color($b-color, $color) {
+  background: $b-color;
+  color: $color;
+}
+.ul-container {
+  width: 300px;
+  height: 200px;
+  .sass-ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  .sass-li {
+    padding: 10px;
+    height: 50px;
+    border: 1px solid #ccc;
+  }
+}
+.sass-li:hover {
+  background-color: skyblue;
+  color: white;
+}
+.alert-green {
+  @extend %alert;
+  @include p-color(tomato, green);
+}
+.alert-blue {
+  @extend %alert;
+  @include p-color(tomato, skyblue);
+}
+.alert-orange {
+  @extend %alert;
+  @include p-color(tomato, orange);
+}
+@mixin column($width) {
+  float: left;
+  width: $width;
+  padding: 15px;
+  background: gray;
+}
+
+.col-6 {
+  @include column(50%);
+  border: 1px solid #ccc;
+}
+.col-4 {
+  @include column(33.33%);
+  border: 1px solid #ccc;
+}
+.col p {
+  margin: 10px;
+}
+@media screen and (max-width: 997px) {
+  .col-6 {
+    @include column(33.33%);
+  }
+}

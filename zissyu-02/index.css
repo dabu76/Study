@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.alert-orange, .alert-blue, .alert-green {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.alert-orange p:first-child, .alert-blue p:first-child, .alert-green p:first-child {
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.ul-container {
+  width: 300px;
+  height: 200px;
+}
+.ul-container .sass-ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.ul-container .sass-li {
+  padding: 10px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+
+.sass-li:hover {
+  background-color: skyblue;
+  color: white;
+}
+
+.alert-green {
+  background: tomato;
+  color: green;
+}
+
+.alert-blue {
+  background: tomato;
+  color: skyblue;
+}
+
+.alert-orange {
+  background: tomato;
+  color: orange;
+}
+
+.col-6 {
+  float: left;
+  width: 50%;
+  padding: 15px;
+  background: gray;
+  border: 1px solid #ccc;
+}
+
+.col-4 {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  background: gray;
+  border: 1px solid #ccc;
+}
+
+.col p {
+  margin: 10px;
+}
+
+@media screen and (max-width: 997px) {
+  .col-6 {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    background: gray;
+  }
+}/*# sourceMappingURL=index.css.map */
