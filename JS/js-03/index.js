@@ -30,3 +30,24 @@ function check() {
   }
 }
 document.getElementById("id3").addEventListener("change", function () {});
+
+let btn_count = 0;
+
+$(".badge").on("click", function () {
+  btn_count++;
+  on_off(btn_count);
+});
+
+function on_off(count) {
+  if (count % 2 == 1) {
+    $("body").addClass("change-bg");
+    $(".container-fluid").addClass("change-bg");
+    $(".navbar-brand").css("color", "white");
+    $(".badge").html("White 🔄");
+  } else {
+    $("body").removeClass("change-bg");
+    $(".container-fluid").removeClass("change-bg");
+    $(".navbar-brand").css("color", "black");
+    $(".badge").html("Dark 🔄");
+  }
+}
