@@ -34,3 +34,20 @@
 .change-bg {
   background: black;
 }
+.slide-container {
+  width: 300vw;
+  transition: all 1s;
+}
+.slide-box img {
+  width: 100%;
+}
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+.slide-animation {
+  transform: translateX(-100vw);
+}
+.slide-animation2 {
+  transform: translateX(-200vw);
+}

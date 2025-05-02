@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="result()">result</button>
+    <button onclick="coffee(360)">coffee</button>
+    <p>太祖李成桂が生まれた年は？</p>
+    <input type="text" id="answer" />
+    <button id="send-answer">제출</button>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    console.log(1.2 ** 10);
+    let name = 31;
+    const place = "光州";
+    function result() {
+      let money = 10000;
+      let future = 0;
+      let count = 2;
+      let result = 0;
+      for (let i = 1; i <= count; i++) {
+        if (money >= 50000) {
+          future = money * 0.2;
+          money = future + money;
+        } else {
+          future = money * 0.15;
+          money = future + money;
+        }
+        console.log(future);
+        console.log(money);
+      }
+
+      console.log(money);
+    }
+    function coffee(x) {
+      let first = 0;
+      let second = 0;
+      let result = 0;
+      first = x * (2 / 3);
+      console.log(first);
+      second = first * (2 / 3);
+      console.log(second);
+      result = x + first + second;
+      console.log(result);
+    }
+    let count = 1;
+
+    $("#send-answer").on("click", function () {
+      const collect = 1335;
+      let answer = $("#answer").val();
+      if (count < 3) {
+        if (answer == collect) {
+          window.alert("正解！");
+        } else {
+          window.alert("違う！");
+        }
+        count++;
+      } else {
+        window.alert("ばか！");
+      }
+    });
+  </script>
+</html>
