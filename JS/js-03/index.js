@@ -165,6 +165,8 @@ window.addEventListener("scroll", function () {
 
 $(".lorem").on("scroll", function () {
   const scroll = document.querySelector(".lorem").scrollTop;
+  //divボックスのスクロールバーを下げた量は ボックスをセレクターで探して。
+  // scroll Topを貼ると、スクロールバーを上からどれだけ下げたか教えてくれる。
   const real_scroll = document.querySelector(".lorem").scrollHeight;
   const height = document.querySelector(".lorem").clientHeight;
   const real_height = scroll + height;

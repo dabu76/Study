@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="sell" />
+    <button onclick="buy()">買う</button>
+  </body>
+  <script>
+    console.log(t_cal(2, 10));
+    function t_cal(a, b) {
+      let min = a * 60;
+      let sec = b;
+      let total = (min + sec) * 1000;
+      return total;
+    }
+    let count = true;
+    let result = 0;
+
+    function buy() {
+      let sell = document.getElementById("sell").value;
+      let sale = sell * 0.1;
+
+      if (count == true) {
+        count = false;
+        result = sell - sale - 1.5;
+        console.log(result);
+        return result;
+      } else {
+        result = sell - sale;
+        console.log(result);
+        return result;
+      }
+    }
+  </script>
+</html>
