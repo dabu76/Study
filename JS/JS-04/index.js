@@ -107,3 +107,15 @@ $(".s_Btn").on("click", function () {
   console.log(now_score);
   console.log(result2);
 });
+
+// $.get("https://codingapple1.github.io/price.json ").done(function (data) {
+//   console.log(data.price);
+// });
+
+// $.post("")
+//   .done(function () {
+//     console.log("success");
+//   })
+//   .fail(function () {
+//     console.log("fail");
+//   });
