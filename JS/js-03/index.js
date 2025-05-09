@@ -174,3 +174,37 @@ $(".lorem").on("scroll", function () {
     alert("同意しますか");
   }
 });
+let start = 0;
+let click = false;
+
+$(".slide-box")
+  .eq(0)
+  .on("mousedown", function (e) {
+    start = e.clientX;
+    click = true;
+  });
+
+$(document).on("mousemove", function (e) {
+  if (click) {
+    let result = e.clientX - start;
+    $(".slide-container").css("transform", `translateX(${result}px)`);
+  }
+});
+
+$(document).on("mouseup", function (e) {
+  if (click) {
+    let end = e.clientX;
+    let finalDelta = end - start;
+
+    // ✅ 드래그 방향 및 거리 기준 판단
+    if (finalDelta <= -100) {
+      // 왼쪽으로 충분히 밀었을 때
+      $(".slide-container").css("transform", "translateX(-100vw)");
+    } else {
+      // 아니면 원상복귀
+      $(".slide-container").css("transform", "translateX(0)");
+    }
+
+    click = false;
+  }
+});
