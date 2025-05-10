@@ -153,8 +153,6 @@ $(".slide-3").on("click", () => {
 window.addEventListener("scroll", function () {
   let scroll_height = window.scrollY;
   let change_font = 100;
-  console.log(scroll_height);
-  console.log(change_font);
   if (scroll_height >= change_font) {
     $(".navbar-brand").css("font-size", "20px");
   }
@@ -196,14 +194,18 @@ $(document).on("mouseup", function (e) {
     let end = e.clientX;
     let finalDelta = end - start;
 
-    // ✅ 드래그 방향 및 거리 기준 판단
     if (finalDelta <= -100) {
-      // 왼쪽으로 충분히 밀었을 때
+      $(".slide-container").css("transition", "all 1s");
       $(".slide-container").css("transform", "translateX(-100vw)");
     } else {
-      // 아니면 원상복귀
+      $(".slide-container").css("transition", "all 1s");
+
       $(".slide-container").css("transform", "translateX(0)");
     }
+
+    setTimeout(() => {
+      $(".slide-container").css("transition", "none");
+    }, 500);
 
     click = false;
   }

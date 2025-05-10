@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "title": "食器洗い乾燥機",
+      "brand": "洗浄の匠",
+      "photo": "pr1.jpg",
+      "price": 10000
+    },
+    {
+      "id": 1,
+      "title": "無垢材のベッドフレーム",
+      "brand": "眠り屋ふとん堂",
+      "photo": "pr2.jpg",
+      "price": 20000
+    },
+    {
+      "id": 2,
+      "title": "天然アロマディフューザーセット",
+      "brand": "香りの森",
+      "photo": "pr3.jpg",
+      "price": 30000
+    },
+    {
+      "id": 3,
+      "title": "涼しいサーキュレーター",
+      "brand": "風の匠",
+      "photo": "pr4.jpg",
+      "price": 40000
+    }
+  ]
+}
