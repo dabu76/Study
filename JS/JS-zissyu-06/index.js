@@ -1,15 +1,18 @@
 let allProducts = [];
+let newCard = "";
+let result2 = "";
+let sum = 0;
 
 $.get("./Json/store.json").done(function (data) {
   allProducts = data.products;
-
   renderCards(allProducts);
 });
 
 function renderCards(list) {
+  $(".card_img").html("");
   list.forEach(function (a) {
     let card = `
-      <div class="card" style="width: 18rem draggable='true'">
+      <div class="card" style="width: 18rem" draggable="true">
         <img src="./img/${a.photo}" class="card-img-top" />
         <div class="card-body">
           <h5 class="card-title">${a.title}</h5>
@@ -23,14 +26,10 @@ function renderCards(list) {
     $(".card_img").append(card);
   });
 }
+
 $(".search").on("input", function () {
   let value = $(this).val().trim();
-
-  if (value === "") {
-    renderCards(allProducts);
-    return;
-  }
-
+  if (value === "") return renderCards(allProducts);
   let result = allProducts.filter(
     (item) =>
       item.title.includes(value) ||
@@ -48,10 +47,9 @@ $(document).on("dragstart", ".card", function (e) {
 $(".basket_drag").on("dragover", function (e) {
   e.preventDefault();
 });
-let count = 1;
+
 $(".basket_drag").on("drop", function (e) {
   e.preventDefault();
-
   const title = e.originalEvent.dataTransfer.getData("text/plain");
   const item = allProducts.find((p) => p.title === title);
 
@@ -63,8 +61,9 @@ $(".basket_drag").on("drop", function (e) {
     const input = existingCard.find("input");
     const currentVal = parseInt(input.val());
     input.val(currentVal + 1);
+    sum += item.price;
   } else {
-    const newCard = `
+    newCard = `
       <div class="card card2" style="width: 300px; height: auto; margin-bottom: 10px;">
         <img src="./img/${item.photo}" class="card-img-top" />
         <div class="card-body">
@@ -73,10 +72,68 @@ $(".basket_drag").on("drop", function (e) {
             <small>${item.brand}</small><br />
             <span>値段 : ${item.price}</span>
           </p>
-          <input type="text" value="1">
+          <input type="text" value="1" readonly>
         </div>
-      </div>
-    `;
+      </div>`;
+    sum += item.price;
     $(this).append(newCard);
   }
+
+  if (result2 === "") {
+    result2 = `<div class='final_price'>
+      <h3>値段</h3>
+      <p class='sum'>合計 <span>${sum}</span></p>
+      <button class='buy'>買う</button>
+    </div>`;
+    $(".result_price").append(result2);
+  } else {
+    $(".final_price span").text(`${sum}`);
+  }
+});
+
+$(document).on("click", "#close", function () {
+  $(".black-bg").addClass("show");
+});
+
+$(document).on("click", ".buy", function () {
+  $(".black-bg").removeClass("show");
+});
+
+$(document).on("click", ".send", function () {
+  $(".black-bg").addClass("show");
+  $(".black-bg2").removeClass("show");
+
+  let total = 0;
+  let summary = "<h3>receipt</h3>";
+
+  $(".card2").each(function () {
+    const title = $(this).find(".card-title").text();
+    const brand = $(this).find("small").text();
+    const price = parseInt($(this).find("span").text().replace(/[^\d]/g, ""));
+    const quantity = parseInt($(this).find("input").val());
+    const itemTotal = price * quantity;
+    total += itemTotal;
+
+    summary += `
+      <div class="detail">
+        <p>${title}</p>
+        <p>${brand}</p>
+        <p>¥${price}</p>
+        <p>${quantity}</p>
+        <p>¥${itemTotal}</p>
+      </div>`;
+  });
+
+  summary += `<hr><p><strong>合計：¥${total}</strong></p>`;
+
+  $(".purchase-summary").html(summary);
+});
+
+$(document).on("click", ".close", function () {
+  $(".black-bg2").addClass("show");
+});
+$(".close").on("click", function () {
+  $(".basket_drag").html("");
+  $(".sum").html("");
+  $(".final_price").html("");
 });

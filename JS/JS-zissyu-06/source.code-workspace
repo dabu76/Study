@@ -1,0 +1,37 @@
+{
+  "folders": [
+	{
+		"path": "../../../../../../xampp/htdocs/source"
+	},
+	{
+		"path": "../../precamp"
+	},
+	{
+		"path": "../../hunhunjava"
+	},
+	{
+		"path": "../../tntncss"
+	},
+	{
+		"path": "../../my-shop"
+	},
+	{
+		"path": "../../Newjs"
+	},
+	{
+		"path": "../../html"
+	},
+	{
+		"path": "../../../../Downloads/project1"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "JS",
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "liveServer.settings.useWebExt": false,
+    "liveServer.settings.CustomBrowser": "chrome"
+  }
+}

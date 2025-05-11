@@ -11,35 +11,64 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="d-flex nav">
-      <h3>家構える</h3>
-      <h4>home</h4>
-      <div>ストアー</div>
-      <div>施工見積</div>
-    </div>
-
-    <div class="container-fluid main_wrapper">
-      <div class="search1">
-        <input class="search" type="text" placeholder="検索語入力" />
-      </div>
-      <div
-        class="d-flex justify-content-center align-items-center card_img"
-      ></div>
-      <h3>気に入り</h3>
-
-      <div class="wrapper" draggable="true">
-        <p>こっちにドラッグ</p>
-
-        <div class="basket" draggable="true">
-          <div class="basket_drag" draggable="true"></div>
+    <div class="outer">
+      <div class="black-bg show">
+        <div class="white-bg">
+          <form id="id-pw">
+            <div class="my-3">
+              <p>お名前</p>
+              <input id="id3" type="text" class="form-control" />
+            </div>
+            <div class="my-3">
+              <p>電話番号</p>
+              <input id="pw3" type="password" class="form-control" />
+            </div>
+            <button type="button" class="btn btn-dark send">入力完了</button>
+            <button type="button" class="btn btn-dark" id="close">
+              閉める
+            </button>
+          </form>
         </div>
       </div>
+
+      <div class="black-bg2 show">
+        <div class="receipt">
+          <div class="header"></div>
+          <div class="purchase-summary"></div>
+          <div class="close_btn">
+            <button class="close">閉じる</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex nav">
+        <h3>家構える</h3>
+        <h4>home</h4>
+        <div>ストアー</div>
+        <div>施工見積</div>
+      </div>
+
+      <div class="container-fluid main_wrapper">
+        <div class="search1">
+          <input class="search" type="text" placeholder="検索語入力" />
+        </div>
+        <div
+          class="d-flex justify-content-center align-items-center card_img"
+        ></div>
+        <div class="drag_wrapper">
+          <h3 class="fav">気に入り</h3>
+          <div class="wrapper" draggable="true">
+            <p>こっちにドラッグ</p>
+            <div class="basket" draggable="true">
+              <div class="basket_drag" draggable="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result_price"></div>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
